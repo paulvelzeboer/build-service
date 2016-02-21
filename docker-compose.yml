@@ -1,12 +1,12 @@
 app:
-  image: paul-velzeboer/build-service
+  image: paulvelzeboer/build-service
   ports:
     - 8080
   volumes:
     - /data/db:/data/db
 
 tests:
-  image: paul-velzeboer/build-service-tests
+  image: paulvelzeboer/build-service-tests
   volumes:
     - client/components:/source/client/components
     - client/test:/source/client/test
@@ -18,14 +18,14 @@ tests:
     - TEST_TYPE=all
 
 integ:
-  image: paul-velzeboer/build-service-tests
+  image: paulvelzeboer/build-service-tests
   volumes:
     - src:/source/src
   environment:
     - TEST_TYPE=integ
 
 feTestsWatch:
-  image: paul-velzeboer/build-service-tests
+  image: paulvelzeboer/build-service-tests
   dockerfile: Dockerfile.test
   stdin_open: true
   tty: true
