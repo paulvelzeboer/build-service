@@ -3,4 +3,4 @@
 sudo docker run -t --rm \
   -v $PWD/target/scala-2.10:/source/target/scala-2.10 \
   -v /data/.ivy2:/root/.ivy2/cache \
-  paul-velzeboer/build-service-tests
+  paulvelzeboer/build-service-tests
