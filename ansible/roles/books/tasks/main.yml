@@ -7,7 +7,7 @@
 - name: Container is running
   docker:
     name=build-service
-    image=paul-velzeboer/build-service
+    image=paulvelzeboer/build-service
     ports=8080:8080
     volumes=/data/db:/data/db
   tags: [build-service]
