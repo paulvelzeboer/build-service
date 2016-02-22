@@ -1,4 +1,4 @@
-name := "build-service-service"
+name := "build-service"
 
 version := "1.0"
 
