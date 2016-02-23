@@ -17,5 +17,7 @@
 #WORKDIR /source
 #CMD ["/source/run_tests.sh"]
 
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
+FROM centos:7
+ENV container docker
+VOLUME [ "/sys/fs/cgroup" ]
+CMD ["/usr/sbin/init"]
