@@ -17,10 +17,5 @@
 #WORKDIR /source
 #CMD ["/source/run_tests.sh"]
 
-FROM centos:7
-MAINTAINER "you" <your@email.here>
-ENV container docker
-RUN yum -y update && yum clean all
-ENV DOMAIN "http://10.0.0.100"
-VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/sbin/init"]
+FROM httpd:2.4
+COPY ./public-html/ /usr/local/apache2/htdocs/
